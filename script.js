@@ -4,31 +4,33 @@ const submissions = [
   { name: "Jack", score: 59, date: "2019-07-05", passed: false },
   { name: "Jill", score: 88, date: "2020-04-22", passed: true },
 ];
-//question can you use this instead of new
-//might have question on how hes creating an object and then pushing
+
 function addSubmission(array, newName, newScore, newDate) {
-  let newSubmission;
-  if (newScore >= 60) {
-    newPassed = true;
-  } else {
-    newPassed = false;
-  }
   array.push({
     name: newName,
     score: newScore,
     date: newDate,
-    passed: newPassed,
+    passed: newScore >= 60,
   });
 }
 
+//addSubmission(submissions, "Jackson", 100, "2022-10-27");
+//console.log(submissions)
+
 function deleteSubmissionByIndex(array, index) {
-  submissions.splice(array, index);
+  array.splice(index, 1);
 }
+
+// deleteSubmissionByIndex(submissions, 0);
+// console.log(submissions)
 
 function deleteSubmissionByName(array, name) {
   submissions.indexOf(array, name);
   submissions.splice(array, name);
 }
+
+deleteSubmissionByName(submissions, "Jack")
+console.log(submissions)
 
 function editSubmission(array, index, score) {
   array[index].score = score;
@@ -40,6 +42,7 @@ function findSubmissionByName(array, name) {
     return name === submissions.name;
   });
 }
+//console.log(findAverageScore(submissions));
 
 function findLowestScore(array) {
   let lowest = array[0];
@@ -52,6 +55,7 @@ function findLowestScore(array) {
 
   return lowest;
 }
+//console.log(findLowestScore(submissions));
 
 function findAverageScore(array) {
   let n = 0;
@@ -63,3 +67,13 @@ function findAverageScore(array) {
   return n / submissions.length;
 }
 
+//console.log(findAverageScore(submissions))
+
+function filter90AndAbove(array) {
+  let find = array.filter(function (submissions) {
+    return submissions.score >= 90;
+  });
+  return find;
+}
+//Test filter90AndAbove = works
+//console.log(filter90AndAbove(submissions))
