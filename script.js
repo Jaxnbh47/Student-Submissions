@@ -29,8 +29,8 @@ function deleteSubmissionByName(array, name) {
   submissions.splice(array, name);
 }
 
-deleteSubmissionByName(submissions, "Jack")
-console.log(submissions)
+//deleteSubmissionByName(submissions, "Jack")
+//console.log(submissions)
 
 function editSubmission(array, index, score) {
   array[index].score = score;
@@ -77,3 +77,17 @@ function filter90AndAbove(array) {
 }
 //Test filter90AndAbove = works
 //console.log(filter90AndAbove(submissions))
+
+//Extra Challenges****
+
+function createRange(start, end) {
+  for (let i = start; i <= end; i++) {
+    console.log(`${i}`);
+  }
+}
+
+// createRange(2, 5)
+
+function countElements(array) {
+  
+}
