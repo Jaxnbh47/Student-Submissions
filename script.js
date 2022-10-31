@@ -21,7 +21,7 @@ function deleteSubmissionByIndex(array, index) {
   array.splice(index, 1);
 }
 
-// deleteSubmissionByIndex(submissions, 0);
+// deleteSubmissionByIndex(submissions, 2);
 // console.log(submissions)
 
 function deleteSubmissionByName(array, name) {
