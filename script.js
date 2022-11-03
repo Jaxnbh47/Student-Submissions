@@ -38,10 +38,11 @@ function editSubmission(array, index, score) {
 }
 
 function findSubmissionByName(array, name) {
-  return array.find((submissions) => {
-    return name === submissions.name;
+  return array.find((s) => {
+    return name === s.name;
   });
 }
+//console.log(findSubmissionByName(submissions, "Jill"))
 //console.log(findAverageScore(submissions));
 
 function findLowestScore(array) {
@@ -52,13 +53,12 @@ function findLowestScore(array) {
       lowest = value;
     }
   });
-
   return lowest;
 }
-//console.log(findLowestScore(submissions));
+console.log(findLowestScore(submissions));
 
 function findAverageScore(array) {
-  let n = 0;
+  let n = 0; clearInterval
 
   for (const value of array) {
     n += value.score;
