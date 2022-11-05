@@ -55,7 +55,8 @@ function findLowestScore(array) {
   });
   return lowest;
 }
-console.log(findLowestScore(submissions));
+
+// console.log(findLowestScore(submissions));
 
 function findAverageScore(array) {
   let n = 0; clearInterval
@@ -68,6 +69,14 @@ function findAverageScore(array) {
 }
 
 //console.log(findAverageScore(submissions))
+
+function filterPassing(array) {
+  return array.filter((value) => {
+    return value.passed;
+  });
+};
+
+console.log(filterPassing(submissions))
 
 function filter90AndAbove(array) {
   let find = array.filter(function (submissions) {
